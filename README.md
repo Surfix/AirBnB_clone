@@ -13,7 +13,7 @@ After a few months,we should have a complete web application composed by:
 
 ## Final product
 
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/fe2e3e7701dec72ce612472dab9bb55fe0e9f6d4.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221126T162836Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=5cbdb19c68bd8ddf356c14de85a57a43a7d604aa9c7368b8bea530fd319ebe6b)
+![final product](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/fe2e3e7701dec72ce612472dab9bb55fe0e9f6d4.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221126%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221126T162836Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=5cbdb19c68bd8ddf356c14de85a57a43a7d604aa9c7368b8bea530fd319ebe6b)
 
 ## Steps
 
