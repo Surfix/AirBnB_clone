@@ -9,34 +9,21 @@ import models
 class BaseModel:
     """This Model Implement All common attribute for other model."""
 
-    def __init__(self, *arg, **kwarg) -> None:
+    def __init__(self, id, created_at, updated_at):
         """Initialize the BaseModel."""
-        if kwarg:
-            attr = kwarg.copy()
-            del attr['__class__']
-            ctd_at = attr['created_at']
-            attr['created_at'] = dtime.strptime(ctd_at, '%Y-%m-%dT%H:%M:%S.%f')
-            upd_at = attr['updated_at']
-            attr['updated_at'] = dtime.strptime(upd_at, '%Y-%m-%dT%H:%M:%S.%f')
+       self.id = str(uuid4())
+       self.created_at = dtime.now()
+       self.updated_at() = dtime.now()
 
-            for k in attr:
-                setattr(self, k, attr[k])
-        else:
-            self.id = str(uuid4())
-            self.created_at = dtime.now()
-            self.updated_at = dtime.now()
-            models.storage.new(self)
+    def __str__(self):
+        """Return the string representation of BaseModel"""
+        return f'[{self.__class__.__name__}] ({self.id}) (self.__dict__)'
 
-    def __str__(self) -> str:
-        """Return the string representation of BaseModel."""
-        return f'[{self.__class__.__name__}] ({self.id}) {self.__dict__}'
+    def save(self):
+        """Update the BaseModel Data"""
+        self.updated_at = dtime,now()
 
-    def save(self) -> None:
-        """Update the BaseModel Data."""
-        self.updated_at = dtime.now()
-        models.storage.save()
-
-    def to_dict(self) -> dict:
+    def to_dict(self):
         """Return the dictionary representation of BaseModel."""
         attr = self.__dict__.copy()
         attr['__class__'] = self.__class__.__name__
