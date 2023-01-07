@@ -2,6 +2,7 @@
 
 import uuid
 import datetime
+import models
 
 """ Parent class to all classes of the AirBnB clone project """
 
@@ -25,14 +26,16 @@ class BaseModel():
             self.id = str(uuid.uuid4())
             self.created_at = datetime.datetime.now()
             self.updated_at = datetime.datetime.now()
+            models.storage.new(self)
 
     def __str__(self):
-        """Return the string representation of the BaseModel"""
+        """Return the stringrepresentation of the BaseModel"""
         return ('[{}] ({}) {}'.format(self.__class__.__name__, self.id, self.__dict__))
 
     def save(self):
         """Update the Basemodel object's updated_at attribute"""
         self.updated_at = datetime.datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """Return the dictionary representation of the BaseModel object"""
