@@ -3,26 +3,6 @@ import json
 from models.base_model import BaseModel
 
 
-class FileStorage():
-    "Serializes instances to a JSON and deserializes JSON file to instances"
-    __file_path = "file.json"
-    __objects = {}
-    class_dict = {"BaseModel": BaseModel}
-
-    def all(self):
-        """ returns the dictionary for all objects"""
-        return self.__objects
-
-    def new(self, obj):
-        """adds obj to __object"""
-        if obj:
-            key = '{}.{}'.format(obj.__class__.__name__, obj.id)
-            self.__objects[key] = obj
-#!/usr/bin/python3
-import json
-from models.base_model import BaseModel
-
-
 class FileStorage:
     "Serializes instances to a JSON and deserializes JSON file to instances"
     __file_path = "file.json"
